@@ -3,6 +3,8 @@
 ## Description
 This website allows to a certain user to create and store *Items*. With these *Items* the user also can create and store *Budgets*.
 
+> This is a capstone project for [CS50's Web Programming with Python and Javascript](https://cs50.harvard.edu/web/2020/)
+
 ## Specifications
 
 ### Tools
@@ -39,5 +41,14 @@ Inside this directory are the folowing files and directories:
 
 - `urls.py` file: This file specifies the rendering of urls and API routes
 
-- `views.py` fiel: Here is the code to render the html templates or deal with Http requests.
+- `views.py` file: Here is the code to render the html templates or deal with Http requests.
 
+## Instructions
+
+> WARNINING: This respository is not production ready. Django Secret Key is exposed
+
+1. Run `python manage.py runserver` to start web application in localhost
+
+2. Got to `localhost:8000` on browser
+
+3. Register or Log in with the following credientials `user`:jose@example.com `password`: 1234
