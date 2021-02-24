@@ -52,3 +52,5 @@ Inside this directory are the folowing files and directories:
 2. Got to `localhost:8000` on browser
 
 3. Register or Log in with the following credientials `user`:jose@example.com `password`: 1234
+
+Here is [video](https://youtu.be/bviXT05DLRI) showing the functionality
