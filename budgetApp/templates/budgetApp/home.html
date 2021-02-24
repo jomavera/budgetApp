@@ -1,0 +1,42 @@
+{% extends "budgetApp/layout.html" %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">BudgetApp</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p class="lead">Welcome back!</p>
+            <p class="lead">You can create budgets by doing the following:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p class="h4">Items</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>Here yo can create <em>items</em> by defining its name, $ per unit, etc.</p>
+            <p>With the defined items you can add them to the budgets.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p class="h4">Budgets</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>Here yo can create <em>budgets</em> by adding items and their quantities.</p>
+            <p>The agreggation of items allows to build a budget.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

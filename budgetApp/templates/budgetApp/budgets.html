@@ -1,0 +1,116 @@
+{% extends "budgetApp/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+
+<div class="container">
+    <input class="form-group" type="hidden" id="custId" value="{{ user.id }}"/>
+    
+    <div id="button-create">
+        <div class="row">
+            <div class="card">
+                <a class="btn btn-primary" id = "newItem">Create New Budget</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-back">
+        <div class="row">
+            <div class="card">
+                <a class="btn btn-danger" id = "goBack">Return</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div id="message-alert"></div>
+    </div>
+    <div id="new-view">
+        <div class="row">
+            <div class="col-12">
+                <h3>New Budget</h3>
+                <form id="compose-form">
+                    <div class="form-group row">
+                        <label for="nameProd" class="col-sm-2 col-form-label">Name</label>
+                        <input type="text" class="col-sm-8 form-control" id="nameBudget">
+                    </div>                     
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <button class="btn btn-primary mb-2" id="createItem">Create</button> 
+            </div>
+        </div>
+    </div>
+
+    <div id="budgets-view">
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody id="budget-row">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="products-view">
+        <h3 id="name-product"></h3>
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">$/Unit</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">$</th>
+                </tr>
+                </thead>
+                <tbody id="product-row">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="add-view">
+        <div class="row">
+            <hr>
+            <div class="col-12">
+                <span class="badge badge-pill badge-primary">Add item</span>
+                <form id="compose-form">
+                    <div class="form-group row ">
+                        <label for="Product" class="col-sm-2 col-form-label">Item</label>
+                        <select class="col-sm-8 form-control" id="productName">
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label for="QuantProd" class="col-sm-2 col-form-label">Quantity</label>
+                        <input type="number" class="col-sm-8 form-control" id="quantityProduct" min="1">
+                    </div>                  
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <button class="btn btn-success mb-2" id="addProduct">Add</button> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'budgetApp/budgets.js' %}"></script>
+{% endblock %}
